@@ -6,7 +6,9 @@ This repo includes `Webpack` to start an environment to build frontend views usi
 
 ### Participants
 Alonso Díaz Ortiz - 202173602-6
+
 Flavio Oyarce González - 202173617-4
+
 Cristobal Tirado Morales - 202104586-4
 
 El proyecto fue realizado en conjunto con todos los participantes utilizando Visual Studio, Live Share.
