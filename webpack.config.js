@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (_, argv) => ({
   entry: './src/index.js',
+
   output: {
     filename: '[name].[contenthash].js',
     publicPath: '/'
@@ -47,6 +48,7 @@ module.exports = (_, argv) => ({
     ]
   },
   devServer: {
+    allowedHosts: 'all',
     port: 5050,
     hot: false,
     historyApiFallback: {

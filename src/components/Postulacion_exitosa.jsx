@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../stylesheets/PostulacionExitosa.scss'
 
-const PostulacionExitosa = ({ visible, onClose, ramo, departamento, profe }) => {
+const PostulacionExitosa = ({ visible, onClose, ramo, departamento, profe , mensaje}) => {
   const navigate = useNavigate()
 
   const handlePostular = () => {
@@ -14,6 +14,7 @@ const PostulacionExitosa = ({ visible, onClose, ramo, departamento, profe }) => 
       departamento,
       profesor: profe,
       tipo: "Docente",
+      mensaje: mensaje,
       fecha: new Date().toLocaleString('es-CL', {
         day: '2-digit',
         month: '2-digit',
@@ -63,8 +64,7 @@ const PostulacionExitosa = ({ visible, onClose, ramo, departamento, profe }) => 
 
           <h3>Perfil deseado</h3>
           <div className="requisitos">
-            <span className="tag red">Promedio &gt; 80</span>
-            <span className="tag green">Asistencia &gt; 50%</span>
+            <span className="tag blue">{mensaje}</span>
           </div>
         </div>
 

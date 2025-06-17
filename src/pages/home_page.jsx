@@ -25,7 +25,6 @@ const HomePage = () => {
     setPostulaciones(actualizadas) // actualiza el estado en HomePage
   }
 
-{/*ngrok config add-authtoken 2ycJOYvKsla8oNUOFEhFOluVOb1_2ccnujvtDQg692XSo8VGH*/}
   return (
     <div className="home">
       <p>
@@ -56,10 +55,9 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <h3>Requisitos</h3>
+              <h3>Perfil deseado</h3>
               <div className="requisitos">
-                <span className="tag red">Promedio &gt; 80</span>
-                <span className="tag green">Asistencia &gt; 50%</span>
+                <span className="tag blue">{postulacionSeleccionada.mensaje}</span>
               </div>
             </div>
 

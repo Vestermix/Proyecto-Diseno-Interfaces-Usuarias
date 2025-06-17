@@ -7,109 +7,135 @@ const AYUDANTIAS_POR_DEPTO = {
    { 
     nombre: "[IWI-131] - Programación",
     profesor: "Daniel Flores",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
    },
     {
     nombre: "[INF-134] - Estructuras de Datos",
-    profesor: "Juan Pablo"
+    profesor: "Juan Pablo",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     },
     {
       nombre: "[INF-239] - Bases de Datos",
-      profesor: "Richard Rooms"
+      profesor: "Richard Rooms",
+      mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     },
     {
       nombre: "[INF-246] - Sistemas Operativos",
       profesor: "Vitor Tap",
+      mensaje:"Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
     nombre: "[INF-295] - Inteligencia Artificial",
-    profesor: "Ely Montero"
+    profesor: "Ely Montero",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
   }
   ],
   Física: [
     {
       nombre:"[FIS-141] - Física General IV-A",
-      profesor: "Fabian Mendizabal"
+      profesor: "Fabian Mendizabal",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     },
     {
       nombre:"[FIS-131] - Física General III",
-      profesor: "Alonso Days"
+      profesor: "Alonso Days",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
     nombre:"[FIS-121] - Física General II",
-    profesor: "Clark Kent"
+    profesor: "Clark Kent",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
       nombre:"[FIS-210] - Mecanica Intermedia I",
-      profesor:"Gonzalo Gutierrez"
+      profesor:"Gonzalo Gutierrez",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     },
     {
     nombre:"[FIS-245] - Métodos de la Física Matemática",
-    profesor: "Matias Ramirez"}
+    profesor: "Matias Ramirez",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
+  }
   ],
   Telematica: [
    { 
     nombre: "[ELO-320] - Estructura de datos y Algoritmos",
     profesor: "Richard Watterson",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
    },
     {
     nombre: "[TEL-222] - Fundamentos de transmisión de señales",
-    profesor: "Mike Wasowski"
+    profesor: "Mike Wasowski",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
       nombre: "[TEL-335] - Diseño de aplicaciones web y móviles",
-      profesor: "Mark Zuckerberg"
+      profesor: "Mark Zuckerberg",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
       nombre: "[TEL-315] - Redes inalámbricas",
       profesor: "R2D2",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
     nombre: "[ELO-322] - Redes de computadores I",
-    profesor: "Lain Iwakura"
+    profesor: "Lain Iwakura",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
   }
   ],
   Eléctrica: [
    { 
     nombre: "[ELI-211] - Redes Eléctricas I",
     profesor: "El Papu",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
    },
     {
     nombre: "[ELI-212] - Redes Eléctricas II",
-    profesor: "El Super Papu"
+    profesor: "El Super Papu",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
       nombre: "[ELI-215] - Campos Electromagnéticos",
-      profesor: "Magneto"
+      profesor: "Magneto",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     },
     {
       nombre: "[ELI-216] - Electrónica General I",
       profesor: "Mago Eléctrico Clash Royale",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
     nombre: "[ELI-110] - Introducción a la Electrotecnia",
-    profesor: "Pikachu"
+    profesor: "Pikachu",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     }
   ],
   Matemática: [
    { 
     nombre: "[MAT-024] - Matemáticas 4",
     profesor: "Bulma",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
    },
     {
     nombre: "[MAT-270] - Análisis Numérico",
-    profesor: "Don Francisco"
+    profesor: "Don Francisco",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
       nombre: "[MAT-235] - Variable Compleja",
-      profesor: "Doctor Eggman"
+      profesor: "Doctor Eggman",
+    mensaje: "Cercano al estudiante, Buena disposición, Comunicación clara."
     },
     {
       nombre: "[MAT-243] - EDO",
       profesor: "Tony Stark",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     },
     {
     nombre: "[MAT-214] - Estructuras Algebraicas",
-    profesor: "Profesor Doofenshmirtz"
+    profesor: "Profesor Doofenshmirtz",
+    mensaje: "Responsable y puntual, Explicación precisa, Seguimiento de pautas"
     }
   ]
 }
@@ -122,6 +148,7 @@ const Docente = () => {
   const [ramoSeleccionado, setRamoSeleccionado] = useState("")
   const [departamentoSeleccionado, setDepartamentoSeleccionado] = useState("")
   const [profesorSeleccionado, setProfesorSeleccionado] = useState("")
+  const [mensajeSeleccionado, setMensajeSeleccionado] = useState("")
 
 
   useEffect(() => {
@@ -189,6 +216,7 @@ const Docente = () => {
                     <button onClick={() => {
                       setRamoSeleccionado(ay.nombre)
                       setProfesorSeleccionado(ay.profesor) // <-- aquí extraemos el profe
+                      setMensajeSeleccionado(ay.mensaje) 
                       setDepartamentoSeleccionado(departamento)
                       setModalVisible(true)
                       }}>
@@ -208,6 +236,7 @@ const Docente = () => {
       onClose={() => setModalVisible(false)}
       ramo={ramoSeleccionado}
       departamento={departamentoSeleccionado}
+      mensaje={mensajeSeleccionado}
       profe={profesorSeleccionado}
     />
     </div>
