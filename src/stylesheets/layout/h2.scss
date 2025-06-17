@@ -1,0 +1,20 @@
+.info {
+  background-color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+
+  table {
+    border-collapse: collapse;
+
+    td {
+      padding: 2px 6px;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    td:first-child, td:nth-child(3) {
+      font-weight: bold;
+    }
+  }
+}
