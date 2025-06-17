@@ -1,5 +1,28 @@
 .nav-bar {
   display: flex;
-  background-color: #ccc;
-  padding-left: 20px;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #f5f5f5;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.nav-bar__link {
+  color: #003366;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-bar__link:hover {
+  background-color: #dbeaff;
+}
+
+.nav-bar__link--active {
+  background-color: #e3f0ff;  // azul claro
+  color: #003366;
 }

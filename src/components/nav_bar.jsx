@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import '../stylesheets/nav-bar/nav-bar.scss'
 
 export const NavBar = () => {
   const navLinkClass = ({ isActive }) => {
@@ -19,17 +20,17 @@ export const NavBar = () => {
         className={navLinkClass}
         to='/Docente'
       >
-        Ayudantía Docente
+        Ayudantías Docente
       </NavLink>
       <NavLink 
       className={navLinkClass}
       to = '/Administrativa'>
-        Ayudantía Administrativa
+        Ayudantías Administrativas
       </NavLink>
       <NavLink
       className={navLinkClass}
       to = '/Investigacion'>
-        Ayudantía de Investigación
+        Ayudantías de Investigación
       </NavLink>
     </nav>
   )

@@ -3,8 +3,8 @@ import '../stylesheets/HomePage.scss' // Asegúrate de tener este archivo
 
 const HomePage = () => {
   const [postulaciones, setPostulaciones] = useState([])
-  const [showDocente, setShowDocente] = useState(false)
-  const [showOtras, setShowOtras] = useState(false)
+  const [showDocente, setShowDocente] = useState(true)
+  const [showOtras, setShowOtras] = useState(true)
   const [modalInfoVisible, setModalInfoVisible] = useState(false)
   const [postulacionSeleccionada, setPostulacionSeleccionada] = useState(null)
 
@@ -30,6 +30,7 @@ const HomePage = () => {
       <p>
         ¡Te damos la bienvenida a PAU, la plataforma para postular a diversas ayudantías de nuestra universidad!
       </p>
+      <h3>Mis Postulaciones :</h3>
       {modalInfoVisible && postulacionSeleccionada && (
         <div className="overlay" onClick={() => setModalInfoVisible(false)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
