@@ -55,7 +55,7 @@ const HomePage = () => {
                 </div>
               </div>
 
-              <h3>Perfil deseado</h3>
+              <h2>Perfil deseado</h2>
               <div className="requisitos">
                 <span className="tag blue">{postulacionSeleccionada.mensaje}</span>
               </div>

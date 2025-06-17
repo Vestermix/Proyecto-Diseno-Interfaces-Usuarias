@@ -43,7 +43,7 @@ const PostulacionExitosa = ({ visible, onClose, ramo, departamento, profe , mens
         <div className="modal-header">
           <h2>Postular Ayudantía Docente</h2>
         </div>
-
+          <h3>Información: </h3>
         <div className="modal-body">
           <div className="datos">
             <div>
@@ -62,7 +62,7 @@ const PostulacionExitosa = ({ visible, onClose, ramo, departamento, profe , mens
             </div>
           </div>
 
-          <h3>Perfil deseado</h3>
+          <h2>Perfil deseado</h2>
           <div className="requisitos">
             <span className="tag blue">{mensaje}</span>
           </div>
